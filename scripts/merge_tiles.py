@@ -7,7 +7,7 @@ import os
 import random
 import threading
 from itertools import chain, product
-from logger import logger
+from scripts.logger import logger
 
 from PIL import Image
 

@@ -1,6 +1,5 @@
 # coding: utf-8
 from __future__ import print_function, division
-from logger import logger
 
 import copy
 import json
@@ -8,10 +7,10 @@ import string
 import urllib
 import os
 
-from catalog import Catalog
-from export import coords2geojson
+from scripts.catalog import Catalog
+from scripts.export import coords2geojson
 from scripts.merge_tiles import PkkAreaMerger
-from utils import xy2lonlat, make_request, TimeoutException
+from scripts.utils import xy2lonlat, make_request, TimeoutException
 
 try:
     import urlparse
@@ -19,6 +18,11 @@ try:
 except ImportError:  # For Python 3
     import urllib.parse as urlparse
     from urllib.parse import urlencode
+
+import logging
+
+logging.basicConfig(filename='debug.log', level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 
 ##############
@@ -393,5 +397,4 @@ class Area:
             print(msg)
 
     def error(self, msg):
-        if self.with_log:
-            logger.warning(msg)
+        print('err')

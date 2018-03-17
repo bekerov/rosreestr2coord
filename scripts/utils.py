@@ -21,7 +21,7 @@ import urllib2
 import socket
 # import urllib
 import math
-from logger import logger 
+from scripts.logger import logger
 
 
 def y2lat(y):

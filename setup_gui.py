@@ -1,6 +1,5 @@
 import sys, os
 from cx_Freeze import setup, Executable
-from version import VERSION
 
 product_name = "rosreestr2coord"
 base = None
