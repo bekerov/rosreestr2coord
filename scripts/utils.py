@@ -1,5 +1,5 @@
 from __future__ import division, print_function
-import proxy_handling
+from scripts import proxy_handling
 import urllib2
 
 # Try to send request through a TOR
